@@ -1,0 +1,76 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main Container for split layout */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    /* height: 100vh; */
+    align-items: center;
+    justify-content: center;
+    background-color: #f1e6d1; /* Soft beige background */
+}
+
+/* Left Section Styling */
+.left-section {
+    flex: 1; /* Take up 50% of the screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 60px; /* Align content towards the left */
+}
+
+.logo-img {
+    width: 200px;
+    height: 130px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    size: 10px;
+}
+
+.login-btn {
+    background-color: #4A4F3D; /* Dark greenish color */
+    color: white;
+    padding: 15px 60px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.signup-prompt {
+    font-size: 1rem;
+    color: #333;
+}
+
+.signup-link {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Right Section for the Postcards Image */
+.right-section {
+    flex: 1; /* Take up the other 50% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: fill;
+}
+
+.postcard-img {
+    height: 100vh;
+    width: 40vw;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}

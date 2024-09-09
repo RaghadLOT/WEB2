@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User's Travel Page</title>
+    <link rel="stylesheet" href="user-travel-css.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header with Links -->
+        <header class="header">
+            <h1>[name]’s Travels</h1>
+            <nav class="nav-links">
+                <a href="user-homepage.html" id="back-homepage-link">Back to Homepage</a> <!--user homepage link needed-->
+                <a href="#" id="sign-out-link">Log-out</a>
+            </nav>
+        </header>
+
+        <!-- Travels Section -->
+        <section class="travels-section">
+            <div class="travels-header">
+                <h2>All Travels</h2>
+                <a href="#" id="add-new-travel-link" class="add-travel-link">Add New Travel</a> 
+            </div>
+
+            <!-- Travels Table -->
+            <table class="travels-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Travel</th>
+                        <th rowspan="2">Travel Time</th>
+                        <th rowspan="2">Country</th>
+                        <th colspan="6">Places</th>
+                    </tr>
+                    <tr>
+                        <th>Place Name</th>
+                        <th>Location</th>
+                        <th>Description</th>
+                        <th>Photo</th>
+                        <th>Likes</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody id="travels-table-body">
+                    <!-- Travel rows will be populated here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="user-travel-JS.js"></script>
+</body>
+</html>

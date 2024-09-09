@@ -1,0 +1,173 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Sep 2, 2024, 11:41:26 PM
+    Author     : mashaelal-jaad
+*/
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1e6d1; 
+    margin: 0;
+    padding: 20px;
+}
+
+.travel-details-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #4A4F3D; 
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #00203F; 
+    margin-bottom: 30px;
+}
+
+.traveler-info {
+    background-color: #E5E5E5; 
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.traveler-photo-name {
+    display: flex;
+    align-items: center;
+}
+
+.traveler-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid #00203F;
+}
+
+.traveler-name {
+    font-size: 18px;
+    color: #4A4F3D; 
+}
+
+.visited-places {
+    margin-top: 20px;
+}
+
+.place {
+    background-color: #fefefe; 
+    border: 1px solid #00203F; 
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.place-name {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #00203F; 
+}
+
+.like-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #4A4F3D; 
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.like-button:hover {
+    background-color: #3b3e32; 
+}
+
+.like-count {
+    font-weight: bold;
+}
+
+.place-photo {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.place-location, .place-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #4e4e4e; 
+}
+
+.comments-section {
+    margin-top: 20px;
+}
+
+.comments-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #00203F;
+}
+
+.comments {
+    margin-bottom: 10px;
+}
+
+.comment {
+    background-color: #E5E5E5; 
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.comment p {
+    margin: 0;
+    font-size: 14px;
+    color: #333; 
+}
+
+.comment-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-form textarea {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    resize: none;
+}
+
+.comment-form input[type="submit"] {
+    padding: 10px;
+    background-color: #4A4F3D; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.comment-form input[type="submit"]:hover {
+    background-color: #3b3e32; 
+}
