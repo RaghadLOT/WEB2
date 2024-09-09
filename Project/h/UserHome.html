@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Homepage - Light and Airy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1e6d1; /* Light Beige */
+            color: #4a4f3d; /* Dark Olive-like color */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .header-section h1 {
+            font-size: 32px;
+            color: #4a4f3d; /* Dark Olive-like */
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .auth-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .auth-links a {
+            text-decoration: none;
+            padding: 12px 20px;
+            background-color: #4a4f3d; /* Dark Olive-like */
+            color: white;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .auth-links a:hover {
+            background-color: #3f4534; /* Darker Olive for hover */
+        }
+
+        .welcome-note {
+            font-size: 26px;
+            color: #4a4f3d; /* Dark Olive-like */
+            margin-bottom: 25px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+        }
+
+        .user-info img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
+            border: 3px solid #f5f5dc; /* Light Beige */
+        }
+
+        .user-info h2 {
+            margin: 0;
+            font-weight: 600;
+            color: #4a4f3d; /* Dark Olive-like */
+        }
+
+        .user-info p {
+            margin: 5px 0;
+            color: #6c757d; /* Light Grayish Text */
+        }
+
+        .filter-section {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .filter-section select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #4a4f3d; /* Dark Olive-like */
+        }
+
+        .filter-section button {
+            padding: 10px 20px;
+            background-color: #4a4f3d; /* Dark Olive-like */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .filter-section button:hover {
+            background-color: #3f4534; /* Darker Olive for hover */
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3f4534; /* Light Beige */
+            color: #f1e6d1; /* Dark Olive-like */
+            font-size: 18px;
+        }
+
+        td {
+            background-color: #fff;
+            color: #4a4f3d; /* Dark Olive-like */
+        }
+
+        td img {
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+        }
+
+        td a {
+            text-decoration: none;
+            color: #4a4f3d; /* Dark Olive-like */
+            font-weight: 600;
+        }
+
+        tbody tr:hover {
+            background-color: #e9ecef; /* Light Gray */
+        }
+
+        @media (max-width: 768px) {
+            .header-section, .user-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .auth-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .filter-section {
+                justify-content: center;
+            }
+
+            table, th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-section">
+            <h1>Travel Trail</h1>
+            <div class="auth-links">
+                <a href="user_travel_page.html">My Travels</a>
+                <a href="Untitled-2.html">Log-Out</a>
+            </div>
+        </div>
+
+        <div class="welcome-note">
+            Welcome, John!
+        </div>
+
+        <div class="user-info">
+            <img src="OIP.jpg" alt="User Photo">
+            <div>
+                <h2>John Doe</h2>
+                <p>Email: john.doe@example.com</p>
+                <p>Country: United States</p>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <select id="country-filter">
+                <option value="">Select Country</option>
+                <option value="United States">United States</option>
+                <option value="France">France</option>
+                <option value="Japan">Japan</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Qatar">Qatar</option>
+            </select>
+            <button onclick="filterTravels()">Filter</button>
+        </div>
+
+        <h3>All Travels</h3>
+        <table id="travels-table">
+            <thead>
+                <tr>
+                    <th>Traveller</th>
+                    <th>Country</th>
+                    <th>Travel Month/Year</th>
+                    <th>Total Likes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="travel_details.html">
+                            <img src="female.png" alt="Traveller Photo"> Alice Smith
+                        </a>
+                    </td>
+                    <td>United States</td>
+                    <td>June 2023</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="travel_details.html">
+                            <img src="male.png" alt="Traveller Photo"> Bob Johnson
+                        </a>
+                    </td>
+                    <td>France</td>
+                    <td>April 2024</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="travel_details.html">
+                            <img src="girl.png" alt="Traveller Photo"> Clara Lee
+                        </a>
+                    </td>
+                    <td>Japan</td>
+                    <td>March 2023</td>
+                    <td>180</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="travel_details.html">
+                            <img src="def.png" alt="Traveller Photo"> Sara Ali
+                        </a>
+                    </td>
+                    <td>Saudi Arabia</td>
+                    <td>January 2022</td>
+                    <td>450</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="travel_details.html">
+                            <img src="Man-silouette-.png" alt="Traveller Photo"> Abdullah Ahmed
+                        </a>
+                    </td>
+                    <td>Qatar</td>
+                    <td>June 2024</td>
+                    <td>200</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function filterTravels() {
+            const selectedCountry = document.getElementById('country-filter').value.toLowerCase();
+            const table = document.getElementById('travels-table').getElementsByTagName('tbody')[0];
+            const rows = table.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const countryCell = rows[i].getElementsByTagName('td')[1];
+                const country = countryCell.textContent.toLowerCase();
+                if (selectedCountry === "" || country === selectedCountry) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
