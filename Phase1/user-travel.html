@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User's Travel Page</title>
+    <link rel="stylesheet" href="user-travel-css.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header with Links -->
+        <header class="header">
+            <h1>Raghad's Travels</h1>
+            <nav class="nav-links">
+                <a href="#" id="back-homepage-link">Back to Homepage</a>
+                <a href="#" id="sign-out-link">Log-out</a>
+            </nav>
+        </header>
+
+        <!-- Travels Section -->
+        <section class="travels-section">
+            <div class="travels-header">
+                <h2>All Travels</h2>
+                <a href="#" id="add-new-travel-link" class="add-travel-link">Add New Travel</a> 
+            </div>
+
+            <!-- Travels Table -->
+            <table class="travels-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Travel</th>
+                        <th rowspan="2">Travel Time</th>
+                        <th rowspan="2">Country</th>
+                        <th colspan="6">Places</th>
+                    </tr>
+                    <tr>
+                        <th>Place Name</th>
+                        <th>Location</th>
+                        <th>Description</th>
+                        <th>Photo</th>
+                        <th>Likes</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody id="travels-table-body">
+                    <tr>
+                        <td rowspan="2">1<br><br><a href="#" id="edit-travel-dets-link" class="edit-travel-link">Edit Travel Details</a><br><a href="#" id="del-travel-dets-link" class="delete-travel-link">Delete Travel</a></td>
+                        <td rowspan="2">July 2024</td>
+                        <td rowspan="2">Japan</td>
+                        <td>Mount Fuji</td>
+                        <td>Honshu</td>
+                        <td>A beautiful volcanic mountain in the Japanese island of Honshu</td>
+                        <td><img src="Mount-Fuji.jpg" alt="Mount Fuji" class="travel-photo"></td>
+                        <td>❤️ 55</td>
+                        <td>Mashael:<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br><br>Ghada:<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2<br><br><a href="#" id="edit-travel-dets-link" class="edit-travel-link">Edit Travel Details</a><br><a href="#" id="del-travel-dets-link" class="delete-travel-link">Delete Travel</a></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
